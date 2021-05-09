@@ -7,7 +7,7 @@ from pytube import YouTube
 
 
 
-app= Client("Thumbot",bot_token= os.getenv("TOKEN"),api_id = int(os.getenv("API_ID")), api_hash = os.getenv("API_HASH") )
+app= Client("Thumbot",bot_token= os.getenv("TOKEN"),api_id = int(os.getenv("API_ID",1234567)), api_hash = os.getenv("API_HASH") )
 
 @app.on_message(filters.command(['start']))
 def start(client, message):
@@ -22,7 +22,7 @@ def start(client, message):
 
 @app.on_message(filters.regex("^https?:\/\/?(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/).{11}"))
 def gyt(client,message):
-	update_channel = CHANNEL
+	update_channel = "lntechnical"
 	user_id = message.from_user.id
 	if update_channel :
 	  try:
