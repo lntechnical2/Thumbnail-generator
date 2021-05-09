@@ -12,10 +12,7 @@
         "TOKEN": {
             "description": "Your Telegram BOT TOKEN from @BotFather",
             "value":""
-        },
-        "CHANNEL": {
-            "description": "Your Channel username Dont add @ ex:(lntechnical)",
-            "value": ""
+        
         },
         "API_HASH": {
             "description": "Your API Hash from my.telegram.org ",
