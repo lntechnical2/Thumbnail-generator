@@ -6,6 +6,7 @@
 </p>
 
 <img src ="https://telegra.ph/file/00519548b03f58e4f1e2f.jpg">
+
 # Configs
 
 * BOT_TOKEN  - Get bot token from @BotFather
