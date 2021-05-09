@@ -1,1 +1,35 @@
-
+{
+    "name": "Thumbnail Downloader",
+    "description": "Get YouTube video Thumbnail",
+    "logo": "https://telegra.ph/file/00519548b03f58e4f1e2f.jpg",
+    "keywords": [
+        "Thumbnail",
+        "Downloader",
+        "pyrogram"
+    ],
+    "repository": "https://github.com/lntechnical2/Thumbnail-generator",
+    "env": {
+        "TOKEN": {
+            "description": "Your Telegram BOT TOKEN from @BotFather",
+            "value":""
+        },
+        "CHANNEL": {
+            "description": "Your Channel username Dont add @ ex:(lntechnical)",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Your API Hash from my.telegram.org ",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Your APP ID from my.telegram.org ",
+            "value": ""
+        }
+    },
+        
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
