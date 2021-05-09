@@ -9,7 +9,6 @@ import os
 TOKEN = os.environ.get("TOKEN","")
 API_ID =int(os.environ.get("API_ID",12345))
 API_HASH =os.environ.get("API_HASH","")
-CHANNEL = os.environ.get("CHANNEL","")
 
 
 
@@ -28,15 +27,7 @@ def start(client, message):
 
 @app.on_message(filters.regex("^https?:\/\/?(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/).{11}"))
 def gyt(client,message):
-	update_channel = CHANNEL
-	user_id = message.from_user.id
-	if update_channel :
-	  try:
-	  	client.get_chat_member(update_channel, user_id)
-	  except UserNotParticipant:
-	  	message.reply_text("**__You are not subscribed my channel__** ",parse_mode="markdown", reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([ [ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ]]))
-	  	return
- 
+	
 	try:
 		ms = message.reply_text("```checking valid link or not ```",reply_to_message_id = message.message_id )
 		url =message.matches[0].group(0)
