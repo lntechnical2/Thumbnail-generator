@@ -9,6 +9,7 @@ import os
 TOKEN = os.environ.get("TOKEN","")
 API_ID =int(os.environ.get("API_ID",12345))
 API_HASH =os.environ.get("API_HASH","")
+CHANNEL = os.environ.get("CHANNEL","")
 
 
 
@@ -27,7 +28,7 @@ def start(client, message):
 
 @app.on_message(filters.regex("^https?:\/\/?(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/).{11}"))
 def gyt(client,message):
-	update_channel = "lntechnical"
+	update_channel = CHANNEL
 	user_id = message.from_user.id
 	if update_channel :
 	  try:
