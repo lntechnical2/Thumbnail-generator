@@ -16,8 +16,9 @@
 * API_HASH      - From my.telegram.org
 
 # creator
+
 <p>
   <a herf ="https://t.me/lntechnical">
-      LNTECHNICL
+     lntechnical
   </a>
 </p>
