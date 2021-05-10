@@ -33,7 +33,7 @@ def gyt(client,message):
 		url =message.matches[0].group(0)
 		video = YouTube(url)
 		thumb = video.thumbnail_url
-		ms.edit("**Here Your Thumbnail** ", reply_markup=InlineKeyboardMarkup(
+	        app.send_photo(message.chat.id ,photo = thumb, reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton("🔗 link" ,url=thumb) ]]))
