@@ -3,6 +3,8 @@ from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pytube import YouTube
+from pytube.exceptions import VideoUnavailable
+
 import os 
 
 
