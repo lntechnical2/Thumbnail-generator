@@ -39,6 +39,7 @@ def gyt(client,message):
             [
                 [
                     InlineKeyboardButton("🔗 link" ,url=thumb) ]]))
+                ms.delete()
 	except VideoUnavailable:
 		ms.edit("**Invalid video link!**")
 
