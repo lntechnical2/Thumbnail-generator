@@ -8,9 +8,9 @@ from pytube.exceptions import VideoUnavailable
 import os 
 
 
-TOKEN = os.environ.get("TOKEN","")
-API_ID =int(os.environ.get("API_ID",12345))
-API_HASH =os.environ.get("API_HASH","")
+TOKEN = "1342819762:AAF4hlxmjRMndwkqfsGCU_inj_CNbiyk21U"
+API_ID = 5506621
+API_HASH ="5a8fd4a251594493d8ff2e1960f99ce2"
 
 
 
@@ -35,11 +35,9 @@ def gyt(client,message):
 		url =message.matches[0].group(0)
 		video = YouTube(url)
 		thumb = video.thumbnail_url
-	        app.send_photo(message.chat.id ,photo = thumb, reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("🔗 link" ,url=thumb) ]]))
-                ms.delete()
+		app.send_photo(message.chat.id ,photo = thumb, reply_markup=InlineKeyboardMarkup([    [ InlineKeyboardButton("🔗 link" ,url=thumb) ]]))
+		ms.delete()
+        
 	except VideoUnavailable:
 		ms.edit("**Invalid video link!**")
 
