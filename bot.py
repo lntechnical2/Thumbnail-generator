@@ -12,7 +12,7 @@ API_HASH =os.environ.get("API_HASH","")
 
 
 app= Client("Thumbot",bot_token=TOKEN,api_hash=API_HASH,
-            api_id=APP_ID)
+            api_id=API_ID)
 
 @app.on_message(filters.command(['start']))
 def start(client, message):
